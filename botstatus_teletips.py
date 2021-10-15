@@ -29,7 +29,7 @@ async def main_teletips():
                 GET_CHANNEL_OR_GROUP = await app.get_chat(int(CHANNEL_OR_GROUP_ID))
                 CHANNEL_OR_GROUP_NAME = GET_CHANNEL_OR_GROUP.title
                 CHANNEL_OR_GROUP_TYPE = GET_CHANNEL_OR_GROUP.type
-                xxx_teletips = f"⛓ **<u>𝑺𝒕𝒂𝒕𝒖𝒔 𝒅𝒐 𝑩𝒐𝒕</u>**\n\n**💬 {CHANNEL_OR_GROUP_TYPE}**: {CHANNEL_OR_GROUP_NAME}"
+                xxx_teletips = f"⛓ **<u>🔰 𝐁𝐨𝐭𝐬 𝐒𝐭𝐚𝐭𝐮𝐬 🔰</u>**\n\n**💬 {CHANNEL_OR_GROUP_TYPE}**: {CHANNEL_OR_GROUP_NAME}"
                 for bot in BOT_LIST:
                     try:
                         yyy_teletips = await app.send_message(bot, "/start")
@@ -39,7 +39,7 @@ async def main_teletips():
                         for ccc in zzz_teletips:
                             bbb = ccc.message_id
                         if aaa == bbb:
-                            xxx_teletips += f"\n\n🤔 **BOT**: @{bot}\n😪 **STATUS**: Desativado 🔴"
+                            xxx_teletips += f"\n\n➜ **𝙽𝙾𝙼𝙴 𝙳𝙾 𝙱𝙾𝚃**: @{bot}\n『♚•**STATUS**•♚』: Desativado 🔴"
                             for bot_admin_id in BOT_ADMIN_IDS:
                                 try:
                                     await app.send_message(int(bot_admin_id), f"🚨 **Bih Bih! Puiça mais um maconheiro bot morto!! @{bot} is desativado** 🔴")
@@ -47,7 +47,7 @@ async def main_teletips():
                                     pass
                             await app.read_history(bot)
                         else:
-                            xxx_teletips += f"\n\n🤔 **BOT**: @{bot}\n🤠 **STATUS**: Ativo 🟢"
+                            xxx_teletips += f"\n\n➜ **𝙽𝙾𝙼𝙴 𝙳𝙾 𝙱𝙾𝚃**: @{bot}\n『♚•**STATUS**•♚』: Ativo ✔️🛃"
                             await app.read_history(bot)
                     except FloodWait as e:
                         await asyncio.sleep(e.x)            
